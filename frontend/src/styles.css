@@ -1,0 +1,283 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #17243a;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  background: #101d35;
+  color: white;
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.navbar h2 {
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.navbar h2 span {
+  color: #36d6c5;
+}
+
+.navbar p {
+  color: #c4d0df;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 25px;
+}
+
+.welcome {
+  margin-bottom: 35px;
+}
+
+.welcome h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.welcome p {
+  color: #68768b;
+  font-size: 16px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e6ebf2;
+}
+
+.stat-card h3 {
+  font-size: 15px;
+  color: #68768b;
+}
+
+.stat-card h1 {
+  font-size: 36px;
+  margin: 15px 0;
+  color: #142d50;
+}
+
+.stat-card p {
+  font-size: 13px;
+  color: #8b97a8;
+}
+
+.report-section {
+  background: #142b4d;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 35px;
+}
+
+.report-section h2 {
+  margin-bottom: 12px;
+}
+
+.report-section p {
+  color: #c6d2e2;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+.report-section button {
+  background: #36d6c5;
+  color: #10243d;
+  border: none;
+  padding: 13px 22px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.report-section button:hover {
+  background: #20bba9;
+}
+
+.activity {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #e6ebf2;
+}
+
+.activity h2 {
+  margin-bottom: 20px;
+}
+
+.incident {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #edf0f5;
+  gap: 12px;
+}
+
+.incident:last-child {
+  border-bottom: none;
+}
+
+.incident h3 {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.incident p {
+  color: #8390a2;
+  font-size: 13px;
+}
+
+.high,
+.medium {
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.high {
+  background: #ffe6e6;
+  color: #d83c3c;
+}
+
+.medium {
+  background: #fff2d8;
+  color: #bd7b13;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #101d35;
+  color: #c4d0df;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome h1 {
+    font-size: 25px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .incident {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+/* Emergency Form Improvements */
+
+.report-section input,
+.report-section select {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.report-section button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #32cbbd;
+    color: #10233f;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.report-section button:hover {
+    background: #25b5a8;
+}
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .report-section {
+        padding: 20px;
+    }
+}
+/* Recent Emergency Reports */
+
+.incident {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 22px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.incident h3 {
+    color: #17365d;
+    margin-bottom: 8px;
+}
+
+.incident p {
+    color: #64748b;
+    margin: 5px 0;
+}
+
+.priority {
+    background: #fff0e8;
+    color: #d35400;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .incident {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
